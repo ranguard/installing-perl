@@ -1,7 +1,7 @@
 Scripts and help documentation on installing Perl
 
 # OSX - using Perlbrew setups your environment and installs Perl
-./scripts/install_latest_perl_osx.pl
+curl -L https://github.com/ranguard/installing-perl/raw/master/scripts/install_latest_perl_osx.sh | bash
 
 # Windows
 http://www.youtube.com/watch?v=1RHYPM6e55o

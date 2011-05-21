@@ -19,6 +19,9 @@ if [ -f $BASHP ]; then
 	fi
 else
 	echo "NOT FOUND"
+	echo "Creating $BASHP"
+	echo "# Added by install_latest_perl_osx.pl" >>$BASHP
+	echo "[ -r $BASHR ] && source $BASHR" >>$BASHP
 fi
 
 exit
