@@ -35,11 +35,6 @@ run_cmd(
 );
 
 run_cmd(
-    "Updating your current environment",
-    'source ~/perl5/perlbrew/etc/bashrc'
-);
-
-run_cmd(
     "Installing Perl $perl_version through perlbrew",
     "perlbrew install perl-$perl_version"
 );
