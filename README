@@ -1,0 +1,4 @@
+Scripts and help documentation on installing Perl
+
+# OSX - using Perlbrew setups your environment and installs Perl
+./scripts/install_latest_perl_osx.pl
