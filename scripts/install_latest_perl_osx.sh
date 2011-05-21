@@ -24,12 +24,10 @@ else
 	echo "[ -r $BASHR ] && source $BASHR" >>$BASHP
 fi
 
-exit
-
 echo "Installing perlbrew"
 curl -L http://xrl.us/perlbrewinstall | bash
 
-echo "Updating $bashrc with perlbrew command"
+echo "Updating $BASHR with perlbrew command"
 cat ~/perl5/perlbrew/etc/bashrc >>$BASHR
 
 echo "Updating your current environment"
@@ -43,3 +41,7 @@ perlbrew switch perl-$INSTALLER_PERL_VERSION
 
 echo "Installing cpanm",
 curl -L http://cpanmin.us/ | perl - App::cpanminus
+
+echo "------------------"
+echo "Install complete - close this terminal window and open a new one,"
+echo "then to confirm $INSTALLER_PERL_VERSION is installed type: perl -v"
