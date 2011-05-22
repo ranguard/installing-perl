@@ -8,3 +8,11 @@ curl -L http://xrl.us/installperlnix | bash
 
 # Windows
 http://www.youtube.com/watch?v=1RHYPM6e55o
+
+If someone could write a .bat to automate the install
+for windows as well that would be great.
+
+- Check no other Perl is installed
+- Get install Strawberry Perl (maybe Pro)
+- Install App::cpanminus
+- Install Modern::Perl
