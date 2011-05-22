@@ -3,5 +3,8 @@ Scripts and help documentation on installing Perl
 # OSX - using Perlbrew setups your environment and installs Perl
 curl -L http://xrl.us/installperlosx | bash
 
+# OSX - using Perlbrew setups your environment and installs Perl
+curl -L http://xrl.us/installperlnix | bash
+
 # Windows
 http://www.youtube.com/watch?v=1RHYPM6e55o
