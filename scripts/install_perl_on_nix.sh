@@ -6,6 +6,7 @@ INSTALLER_PERL_VERSION=5.14.0
 
 BASHR=~/.bashrc
 CPANMTMP=~/.cpanm
+PBREW_BASHRC=~/perl5/perlbrew/etc/bashrc
 
 # See if 'make' is installed
 if [ "" == "$(which 'make')" ]; then
@@ -25,11 +26,19 @@ fi
 echo "Installing perlbrew"
 curl -L http://xrl.us/perlbrewinstall | bash
 
-echo "Updating $BASHR with perlbrew command"
-cat ~/perl5/perlbrew/etc/bashrc >>$BASHR
+echo "Checking/updating $BASHR to source perlbrew bashrc"
+if [ ! -f $BASHR ]; then
+	# File missing so create
+	echo "source $PBREW_BASHRC" >> $BASHR
+else
+	if [ "" == "$( cat $BASHR | grep 'source ' | grep $PBREW_BASHRC )" ]; then
+		# source line is missing - so add
+		echo "source $PBREW_BASHRC" >> $BASHR
+	fi;
+fi;
 
 echo "Updating your current environment"
-source ~/perl5/perlbrew/etc/bashrc
+source $PBREW_BASHRC
 
 echo "Installing Perl $INSTALLER_PERL_VERSION through perlbrew"
 perlbrew install perl-$INSTALLER_PERL_VERSION
@@ -42,4 +51,4 @@ perlbrew install-cpanm
 
 echo "------------------"
 echo "Install complete - close this terminal window and open a new one,"
-echo "then to confirm $INSTALLER_PERL_VERSION is installed type: perl -v"
+echo "then to confirm Perl $INSTALLER_PERL_VERSION is installed type: perl -v"
