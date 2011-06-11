@@ -17,7 +17,8 @@ fi;
 if [ -d "$CPANMTMP" ]; then
 	echo "------------------------"
 	echo "Please delete $CPANMTMP and then re-run this command"
-	echo "You may need to run 'sudo rm $CPANMTMP' if you ran cpanm with sudo"
+	echo "You may need to run 'sudo rm -rf $CPANMTMP'"
+	echo "if you ran cpanm with sudo"
 	exit;
 fi
 

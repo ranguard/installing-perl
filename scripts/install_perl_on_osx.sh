@@ -37,7 +37,8 @@ fi
 if [ -d "$CPANMTMP" ]; then
 	echo "------------------------"
 	echo "Please delete $CPANMTMP and then re-run this command"
-	echo "You may need to run 'sudo rm $CPANMTMP' if you ran cpanm with sudo"
+	echo "You may need to run 'sudo rm -rf $CPANMTMP'"
+	echo "if you ran cpanm with sudo"
 	exit;
 fi
 
@@ -46,10 +47,8 @@ curl -L http://xrl.us/perlbrewinstall | bash
 
 # Build as i386 only
 arch=`uname -m`
-if [[ "$arch" == 'i386']]
-then
+if [[ "$arch" == 'i386']]; then
 	echo 'export ARCHFLAGS="-arch i386"' >> ~/perl5/perlbrew/etc/bashrc
-else
 fi
 
 echo "Updating $BASHR with perlbrew command"
