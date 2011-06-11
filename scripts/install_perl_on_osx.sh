@@ -35,6 +35,14 @@ fi
 echo "Installing perlbrew"
 curl -L http://xrl.us/perlbrewinstall | bash
 
+# Build as i386 only
+arch=`uname -m`
+if [[ "$arch" == 'i386']]
+then
+	echo 'export ARCHFLAGS="-arch i386"' >> ~/perl5/perlbrew/etc/bashrc
+else
+fi
+
 echo "Updating $BASHR with perlbrew command"
 cat ~/perl5/perlbrew/etc/bashrc >>$BASHR
 
