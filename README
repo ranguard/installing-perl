@@ -6,13 +6,9 @@ curl -L http://xrl.us/installperlosx | bash
 # Unix/Linux - using Perlbrew setups your environment and installs Perl
 curl -L http://xrl.us/installperlnix | bash
 
-# Windows
+# Windows see this video (though does need updating)
 http://www.youtube.com/watch?v=1RHYPM6e55o
-
-If someone could write a .bat to automate the install
-for windows as well that would be great.
 
 - Check no other Perl is installed
 - Get install Strawberry Perl (maybe Pro)
 - Install App::cpanminus
-- Install Modern::Perl
