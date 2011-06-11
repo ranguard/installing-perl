@@ -6,6 +6,7 @@ INSTALLER_PERL_VERSION=5.14.0
 
 BASHP=~/.bash_profile
 BASHR=~/.bashrc
+CPANMTMP=~/.cpanm
 
 # See if 'make' is installed
 if [ "" == "$(which 'make')" ]; then
@@ -30,6 +31,14 @@ else
 	echo "Creating $BASHP"
 	echo "# Added by install_latest_perl_osx.pl" >>$BASHP
 	echo "[ -r $BASHR ] && source $BASHR" >>$BASHP
+fi
+
+# Ask them to clean ~/.cpanm - so we don't have file perm issues
+if [ -d "$CPANMTMP" ]; then
+	echo "------------------------"
+	echo "Please delete $CPANMTMP and then re-run this command"
+	echo "You may need to run 'sudo rm $CPANMTMP' if you ran cpanm with sudo"
+	exit;
 fi
 
 echo "Installing perlbrew"
