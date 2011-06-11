@@ -28,7 +28,7 @@ echo "Setting Perl $INSTALLER_PERL_VERSION to default"
 perlbrew switch perl-$INSTALLER_PERL_VERSION
 
 echo "Installing cpanm",
-curl -L http://cpanmin.us/ | perl - App::cpanminus
+perlbrew install-cpanm
 
 echo "------------------"
 echo "Install complete - close this terminal window and open a new one,"
