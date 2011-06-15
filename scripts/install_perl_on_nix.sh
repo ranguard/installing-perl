@@ -24,7 +24,7 @@ if [ -d "$CPANMTMP" ]; then
 fi
 
 echo "Installing perlbrew"
-curl -L http://xrl.us/perlbrewinstall | bash
+curl -k -L http://xrl.us/perlbrewinstall | bash
 
 echo "Checking/updating $BASHR to source perlbrew bashrc"
 if [ ! -f $BASHR ]; then
