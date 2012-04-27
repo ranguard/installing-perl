@@ -41,7 +41,7 @@ echo "Updating your current environment"
 source $PBREW_BASHRC
 
 echo "Installing Perl $INSTALLER_PERL_VERSION through perlbrew"
-perlbrew install perl-$INSTALLER_PERL_VERSION
+perlbrew -n install perl-$INSTALLER_PERL_VERSION
 
 echo "Setting Perl $INSTALLER_PERL_VERSION to default"
 perlbrew switch perl-$INSTALLER_PERL_VERSION
