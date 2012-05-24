@@ -11,7 +11,10 @@ PBREW_BASHRC=~/perl5/perlbrew/etc/bashrc
 
 # See if 'make' is installed
 if [ "" == "$(which 'make')" ]; then
-	echo "Unable to find 'make' please check you have Apple's developer tools installed"
+	echo "Unable to find 'make' please install 'Command Line Tools for XCode'"
+	echo "this can be installed on it's own, or from within Xcode, both of"
+	echo "which are available from https://developer.apple.com/downloads/"
+	echo "(free registration required)"
 	exit;
 fi;
 
