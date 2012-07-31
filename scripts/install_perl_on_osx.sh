@@ -26,7 +26,7 @@ if [ "" == "$(which 'make')" ]; then
 	echo "Line Tools for Xcode' from https://developer.apple.com/downloads/"
 	echo "(free registration required)"
 	echo ""
-	exit;
+	exit 1;
 fi;
 
 echo -n "Checking for .bash_profile... "
@@ -54,7 +54,7 @@ if [ -d "$CPANMTMP" ]; then
 	echo "Please delete $CPANMTMP and then re-run this command"
 	echo "You may need to run 'sudo rm -rf $CPANMTMP'"
 	echo "if you ran cpanm with sudo"
-	exit;
+	exit 2;
 fi
 
 echo "Installing perlbrew"
