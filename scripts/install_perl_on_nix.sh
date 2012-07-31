@@ -2,7 +2,7 @@
 
 # Installer script for Perl on Linux/Unix systems
 
-INSTALLER_PERL_VERSION=5.14.2
+INSTALLER_PERL_VERSION=5.16.0
 
 BASHR=~/.bashrc
 CPANMTMP=~/.cpanm
