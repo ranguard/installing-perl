@@ -11,10 +11,21 @@ PBREW_BASHRC=~/perl5/perlbrew/etc/bashrc
 
 # See if 'make' is installed
 if [ "" == "$(which 'make')" ]; then
-	echo "Unable to find 'make' please install 'Command Line Tools for XCode'"
-	echo "this can be installed on it's own, or from within Xcode, both of"
-	echo "which are available from https://developer.apple.com/downloads/"
+	echo "Unable to find 'make'. Please install 'Command Line Tools for Xcode'."
+	echo ""
+	echo "If you have Xcode installed (free from the Mac App Store) you can"
+	echo "install 'Command Line Tools' in the following way:"
+	echo ""
+	echo "  1. Make sure you're online"
+	echo "  2. Start Xcode"
+	echo "  3. Go to Preferences (i.e. press Cmd-,)"
+	echo "  4. Click on 'Downloads'"
+	echo "  5. Click on the 'Install' icon next to 'Command Line Tools'"
+	echo ""
+	echo "If you do not have Xcode installed you can simply download 'Command"
+	echo "Line Tools for Xcode' from https://developer.apple.com/downloads/"
 	echo "(free registration required)"
+	echo ""
 	exit;
 fi;
 
