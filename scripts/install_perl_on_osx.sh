@@ -9,10 +9,17 @@ BASHR=~/.bashrc
 CPANMTMP=~/.cpanm
 PBREW_BASHRC=~/perl5/perlbrew/etc/bashrc
 
+MAVERICKS=$( perl -e 'print `sw_vers` =~ /ProductVersion:\s+10[.](\d+)/ && $1 >=9' );
+
 # See if 'make' is installed
 if [ "" == "$(which 'make')" ]; then
 	echo "Unable to find 'make'. Please install 'Command Line Tools for Xcode'."
 	echo ""
+	if [ $MAVERICKS == "1" ]; then
+		echo "Please run 'xcode-select --install' from the command line, then follow"
+		echo "the gui instructions."
+		exit 1;
+	fi;
 	echo "If you have Xcode installed (free from the Mac App Store) you can"
 	echo "install 'Command Line Tools' in the following way:"
 	echo ""
