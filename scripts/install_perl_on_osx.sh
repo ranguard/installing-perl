@@ -2,7 +2,7 @@
 
 # Installer script for Perl on Linux/Unix systems
 
-INSTALLER_PERL_VERSION=5.28.0
+INSTALLER_PERL_VERSION=5.32.0
 
 BASHP=~/.bash_profile
 BASHR=~/.bashrc
